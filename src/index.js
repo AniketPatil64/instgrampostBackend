@@ -26,7 +26,7 @@ app.use(cors());
 //Seting Up Routes
 
 app.get("/", (req, res) => {
-  res.send("HOME PAGE");
+  res.send(User.find());
 });
 
 app.post("/create", upload.single("file"), async (req, res) => {
